@@ -1,0 +1,12 @@
+<article class="gh-card {{post_class}}">
+    <a class="gh-card-link" href="{{url}}">
+        {{!-- {{#if @first}} --}}
+            {{#if feature_image}}
+                {{> feature-image}}
+            {{/if}}
+        {{!-- {{/if}} --}}
+
+        <h2 class="gh-card-title">{{title}}</h2>
+    </a>
+    <p class="gh-card-excerpt">{{excerpt}}</p>
+</article>

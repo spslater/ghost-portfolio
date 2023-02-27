@@ -1,0 +1,12 @@
+<ul
+    id="pf-nav-list{{#if isSecondary}}-secondary{{/if}}"
+    class="nav {{#if isSecondary}}pf-nav-icons{{/if}}"
+    role="menu"
+    style="display: {{#if isSecondary}}flex{{else}}inline{{/if}}"
+>
+    {{#foreach navigation}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+            <a href="{{url absolute="true"}}">{{label}}</a>
+        </li>
+    {{/foreach}}
+</ul>

@@ -1,0 +1,42 @@
+.pf-nav .nav-python   a,
+.pf-nav .nav-git      a,
+.pf-nav .nav-mastodon a,
+.pf-nav .nav-linkedin a,
+.pf-nav .nav-github   a,
+.pf-nav .nav-discord  a {
+    font-size: 0 !important;
+}
+
+.pf-nav .nav-python   a::before,
+.pf-nav .nav-git      a::before,
+.pf-nav .nav-mastodon a::before,
+.pf-nav .nav-linkedin a::before,
+.pf-nav .nav-github   a::before,
+.pf-nav .nav-discord  a::before {
+    font-family: "Font Awesome 6 Brands";
+    display: inline-block;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.pf-nav .nav-python   a::before {content: "\f3e2"}
+.pf-nav .nav-git      a::before {content: "\f1d2"}
+.pf-nav .nav-mastodon a::before {content: "\f4f6"}
+.pf-nav .nav-linkedin a::before {content: "\f08c"}
+.pf-nav .nav-github   a::before {content: "\f09b"}
+.pf-nav .nav-discord  a::before {content: "\f392"}
+
+@media (max-width: 767px) {
+    .pf-nav .nav-python   a::before,
+    .pf-nav .nav-git      a::before,
+    .pf-nav .nav-mastodon a::before,
+    .pf-nav .nav-linkedin a::before,
+    .pf-nav .nav-github   a::before,
+    .pf-nav .nav-discord  a::before {
+        font-size: 3rem;
+    }
+}

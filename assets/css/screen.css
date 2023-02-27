@@ -1,0 +1,333 @@
+@import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+@import "fonts.css";
+@import "portfolio.css";
+@import "icons.css";
+
+:root {
+    --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Lora, Times, serif;
+
+    --content-width: 100%;
+    --container-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+}
+
+.gh-home-head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+
+.gh-home-logo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+}
+
+.gh-home-logo img {
+    max-height: 48px;
+    margin-bottom: 1.2rem;
+}
+
+.gh-home-description {
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.gh-home-head .gh-search {
+    margin-top: -4px;
+}
+
+.gh-home-nav-title {
+    font-size: 3.2rem;
+    color: #fff;
+}
+
+.has-serif-title .gh-home-nav-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
+.gh-home-nav-description {
+    max-width: 480px;
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.gh-home-copyright {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.01em;
+}
+
+.gh-home-latest {
+    position: relative;
+    padding: 5.6rem;
+    padding-bottom: 0;
+    user-select: none;
+}
+
+.gh-home-latest-wrapper {
+    width: 125%;
+    height: 125%;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+}
+
+.gh-home-latest-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.gh-article {
+    position: relative;
+    max-width: 80%;
+    padding: 0;
+    padding-top: 4rem;
+    margin: 0 auto;
+}
+
+.gh-article-title {
+    font-size: 5.4rem;
+    line-height: 1.1;
+}
+
+.gh-content {
+    --content-font-size: 2.1rem;
+}
+
+.is-head-left-logo .gh-head-inner {
+    grid-template-columns: 1fr 50% 1fr;
+}
+
+.gh-head-logo {
+    font-weight: 800;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.gh-pagehead {
+    margin-bottom: 4rem;
+}
+
+.gh-pagehead-title {
+    font-size: 3.6rem;
+}
+
+.has-serif-title .gh-pagehead-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
+.gh-pagehead-description {
+    margin-top: 0.8rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--color-secondary-text);
+}
+
+.gh-card-link {
+    position: relative;
+    display: block;
+    padding: 3.2rem 0;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.gh-card-link:hover {
+    opacity: 1;
+}
+
+.gh-card:first-child .gh-card-link {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.gh-card-image {
+    margin-bottom: 2.4rem;
+}
+
+.gh-card-date {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.gh-card-month {
+    margin-right: 0.2rem;
+    color: var(--ghost-accent-color);
+    text-transform: uppercase;
+}
+
+.gh-card-title {
+    margin-top: 0.4rem;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.gh-card-link:hover .gh-card-title {
+    opacity: 0.8;
+}
+
+.gh-card-excerpt {
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--color-secondary-text);
+}
+
+.gh-article {
+    padding: 0;
+}
+
+.gh-article-header {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.gh-article-image {
+    margin-top: 0;
+    display: grid;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.gh-article-image img {
+    border-radius: 75px;
+}
+
+.gh-article-title {
+    display: grid;
+    grid-column: 2 / span 3;
+    justify-self: left;
+    align-self: center;
+    padding: 2rem;
+}
+
+.gh-article-footer {
+    padding-top: 3.2rem;
+    margin-top: 8rem;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.gh-article-footer:not(.has-prev):not(.has-next) {
+    display: none;
+}
+
+.gh-article-footer.no-border {
+    margin-top: 32px;
+    border-top: 0;
+}
+
+.gh-navigation {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.gh-navigation-middle .gh-navigation-link {
+    color: var(--ghost-accent-color);
+}
+
+@media (max-width: 767px) {
+    .gh-home-latest {
+        padding: 3.2rem var(--gap) 0;
+    }
+
+    .gh-home-latest-icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .gh-article {
+        padding-top: 3.2rem;
+    }
+
+    .gh-article-title {
+        font-size: 3.6rem;
+    }
+
+    .gh-home-latest-footer {
+        padding: 8rem 0;
+    }
+
+    .gh-article-footer {
+        margin-top: 6.4rem;
+    }
+
+    .gh-navigation-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .gh-pagehead {
+        margin-bottom: 3.6rem;
+    }
+
+    .gh-article {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 991px) {
+    .gh-home {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .gh-home-latest {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .is-head-left-logo .gh-head-menu {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@supports (-moz-appearance: none) {
+    .gh-home-latest-footer .gh-btn {
+        padding-top: 1.3rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .gh-home-latest-footer .gh-btn {
+        padding-top: 1.3rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

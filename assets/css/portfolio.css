@@ -1,0 +1,69 @@
+.gh-site {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.pf-nav {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    padding: 3rem;
+    background-color: var(--ghost-accent-color);
+    color: var(--color-white);
+}
+
+.pf-nav a {
+    color: var(--color-white);
+}
+
+.pf-nav ul {
+    list-style-type: none;
+    padding: 0rem;
+}
+
+.pf-nav-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pf-nav-icons li {
+    padding: 0.5rem;
+}
+
+.pf-nav-top {
+    visibility: hidden;
+}
+
+@media (max-width: 767px) {
+    .pf-nav {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    .pf-nav ul {
+        display: flex;
+    }
+
+    .pf-nav li {
+        font-size: 3rem;
+        padding: 0.5rem;
+    }
+
+    .pf-nav-icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pf-nav-icons li {
+        padding: 3rem;
+    }
+
+    .pf-nav-hr, .pf-wide {
+        visibility: hidden;
+    }
+
+    .pf-nav-top {
+        visibility: visible;
+    }
+}

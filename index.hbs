@@ -1,0 +1,27 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main gh-canvas">
+    <section class="gh-pagehead">
+        <header class="gh-pagehead-content">
+            <h1 class="gh-pagehead-title">Archive</h1>
+            <div class="gh-pagehead-description">
+                {{#if description}}
+                    {{description}}
+                {{/if}}
+            </div>
+        </header>
+    </section>
+
+    <div class="gh-feed">
+        {{#get "pages" limit="all"}}
+            {{#foreach posts}}
+                {{> loop}}
+            {{/foreach}}
+        {{/get}}
+        {{#get "posts" limit="all"}}
+            {{#foreach posts}}
+                {{> loop}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+</main>

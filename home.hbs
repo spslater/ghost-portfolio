@@ -1,0 +1,15 @@
+{{!< default}}
+
+<main id="gh-main" class="gh-main">
+    <div class="gh-home">
+        <div class="gh-home-latest">
+            <section class="gh-home-latest-wrapper">
+                {{#get "pages" filter="slug:about" as |posts|}}
+                {{#foreach posts}}
+                    {{> article}}
+                {{/foreach}}
+                {{/get}}
+            </section>
+        </div>
+    </div>
+</main>

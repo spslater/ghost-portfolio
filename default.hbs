@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        document.documentElement.style.setProperty('--inner-height', window.innerHeight + 'px');
+    </script>
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}} is-head-left-logo is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+    <div class="gh-site">
+        <nav class="pf-nav">
+            <header class="gh-home-head">
+                <div class="gh-home-brand">
+                    <a class="gh-home-logo" href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}">
+                        {{else}}
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
+                    <p class="gh-home-description">{{@site.description}}</p>
+                </div>
+                <a href="javascript:void(0);" class="icon pf-nav-top" onclick="pfexpand()"><i class="fa fa-bars"></i></a>
+            </header>
+
+            <hr class="pf-nav-hr" />
+            {{navigation}}
+            {{navigation type="secondary"}}
+            <hr class="pf-nav-hr" />
+
+            <footer class="gh-home-footer">
+                <p class="gh-home-copyright">{{@site.title}} © 2022-{{date format="YYYY"}}</p>
+            </footer>
+        </nav>
+
+        <div class="pf-wide">&nbsp;</div>
+        {{{body}}}
+    </div>
+
+    <script src="{{asset "built/main.min.js"}}"></script>
+
+    {{ghost_foot}}
+</body>
+
+</html>
