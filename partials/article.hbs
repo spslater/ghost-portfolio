@@ -3,7 +3,7 @@
         {{> feature-image}}
         <h1 class="gh-article-title">{{title}}</h1>
     </header>
-    <div class="gh-content gh-canvas">
+    <div class="gh-content gh-canvas{{#has tag="code"}} line-numbers{{/has}}">
         {{content}}
     </div>
 </article>

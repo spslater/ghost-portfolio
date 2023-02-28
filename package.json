@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "description": "theme for a portfolio",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -42,15 +42,24 @@
         },
         "card_assets": true,
         "custom": {
-            "title_font": {
+            "code_font": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
-                "default": "Modern sans-serif"
+                "options": ["Monofur", "Ubuntu Mono"],
+                "default": "Monofur"
             },
-            "body_font": {
+            "code_style": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
-                "default": "Elegant serif"
+                "options": [
+                    "Default",
+                    "Dark",
+                    "Funky",
+                    "Okaidia",
+                    "Twilight",
+                    "Coy",
+                    "Solarized Light",
+                    "Tomorrow Night"
+                ],
+                "default": "Default"
             }
         }
     },

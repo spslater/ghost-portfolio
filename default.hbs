@@ -9,14 +9,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="
+        {{#match @custom.code_style "=" "Default"}}{{asset "css/prism/prism-default.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Dark"}}{{asset "css/prism/prism-dark.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Funky"}}{{asset "css/prism/prism-funky.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Okaidia"}}{{asset "css/prism/prism-okaidia.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Twilight"}}{{asset "css/prism/prism-twilight.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Coy"}}{{asset "css/prism/prism-coy.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Solarized Light"}}{{asset "css/prism/prism-solarized-light.css"}}{{/match}}
+        {{#match @custom.code_style "=" "Tomorrow Night"}}{{asset "css/prism/prism-tomorrow-night.css"}}{{/match}}
+    ">
+
     <script>
         document.documentElement.style.setProperty('--inner-height', window.innerHeight + 'px');
     </script>
 
+    <style>
+        code[class*="language-"], pre[class*="language-"] {
+            font-family: {{#match @custom.code_font "=" "Monofur"}}var(--font-monofur){{/match}}{{#match @custom.code_font "=" "Ubuntu Mono"}}var(--font-ubuntu){{/match}};
+        }
+    </style>
+
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} is-head-left-logo is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} is-head-left-logo is-head-brand{{#if @site.members_enabled}}{{#unless @member}}{{#is "home"}} is-home-cta{{/is}}{{/unless}}{{/if}}">
     <div class="gh-site">
         <nav class="pf-nav">
             <header class="gh-home-head">
@@ -46,6 +63,10 @@
         <div class="pf-wide">&nbsp;</div>
         {{{body}}}
     </div>
+
+    {{#is "post, page"}}
+        {{> "pswp"}}
+    {{/is}}
 
     <script src="{{asset "built/main.min.js"}}"></script>
 
